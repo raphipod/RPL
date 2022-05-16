@@ -261,7 +261,9 @@ class RokuAudio:
         self.client_version = b"0002"
 
         self.request_id = 0
-        self.loop = asyncio.get_event_loop()
+        self.loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(self.loop)
+        
         self.glib_loop = GLib.MainLoop()
         self.gst_thread = None
 
