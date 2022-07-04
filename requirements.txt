@@ -1,3 +1,5 @@
 daiquiri
 uvloop
 websockets
+PyGObject
+pyinstaller
